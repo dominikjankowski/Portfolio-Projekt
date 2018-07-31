@@ -1,0 +1,137 @@
+@media all and (max-width: 992px) {
+    section {
+        padding: 5px;
+    }
+    #main-nav label{
+        display: inline-block;
+        line-height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        text-align: right;
+        padding-right: 30px;
+        font-size: 130%;
+        color: seagreen;
+        font-weight: 700;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 60px;
+        background-color: #fff;
+        width: 100%;
+    }
+    #main-nav input:checked + ul{
+        display: block;
+    }
+    
+
+    /*
+   nav #menu{
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        text-align: right;
+       
+    }
+   nav #menu a{
+        text-decoration: none;
+        color: green;
+        font-size: 130%;
+        line-height: 60px;
+        display: inline-block;
+        padding-right: 20px; 
+    }
+    
+    #menu + ul{
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        background-color: #fff;
+        width: 100%;
+        top: 60px;   
+    }
+    #menu:hover + ul{
+        display: block; 
+    }
+    #main-nav ul li {
+        display: block;
+    }
+*/
+    /*
+    #main-nav ul{
+        display: none;
+    }
+    #menu{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        text-align: right;
+        
+    }
+    #menu a {
+        text-decoration: none;
+        color: lawngreen;
+        font-size: 140%;   
+        line-height: 70px;
+        padding-right: 20px;
+        
+    }
+    #menu:hover + ul {
+        display: block;
+        position: absolute;
+        top: 70px;
+    } 
+*/
+    #about .about-inner {
+
+        width: 100%;
+    }
+    #about .about-inner img {
+        width: 100%;
+    }
+    #about .about-inner.text-left {
+        margin-top: 30px;
+
+    }
+    #portfolio .img-box {
+        width: 100%;
+    }
+    #contact-address {
+        width: 100%;
+    }
+    #contact-form {
+        width: 100%;
+    }
+    #social-media-icons {
+        text-align: center;
+    }
+    #contact-address {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #main-header .inner-header h1 {
+        font-size: 350%;
+    }
+    #main-header .inner-header h2 {
+        font-size: 200%;
+    }
+    #social-media-icons {
+        text-align: center;
+    }
+    #social-media-icons i {
+        margin: 0;
+    }
+    
+}

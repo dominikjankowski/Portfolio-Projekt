@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #291f1a;
+
+}
+
+/* helpers */
+
+span {
+    color: #1ac056;
+    font-weight: 400;
+}
+
+section {
+    padding: 40px 70px;
+    background-color: #f9fcfe;
+}
+
+section h2 {
+    font-weight: 100;
+    font-size: 200%;
+    margin-bottom: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+p {
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 110%;
+}
+nav label{
+    display: none;
+}
+#main-nav input{
+    display: none;
+}
+
+#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    z-index: 999999;
+}
+
+#main-nav ul {
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav ul li {
+    display: inline-block;
+    line-height: 60px;
+    margin-right: 50px;
+}
+
+/* nalezy dodac kolor do a (linka), poniewaz posiada on style koloru nadane przez przegladarke */
+
+#main-nav ul li a {
+    color: #1ac056;
+    transition: 0.4s color;
+    text-decoration: none;
+}
+
+#main-nav ul li a:hover {
+    color: #171917;
+}
+
+/* header */
+
+#main-header {
+    height: 100vh;
+    background-image: url('../gallery/img/header-background.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* kiedy zmieniamy pozycje na absolutna lub fixed, nalezy pamietac o rozciagnieciu elementu na 100% (jezeli takie mamy wytyczne) - np. nawigacja, w tym przypadku rozciagnelismy na 100%, poniewaz chcemy centrowac tekst wzgledem tego kontenera */
+
+#main-header .inner-header {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* font-weight nie jest dziedziczone, dlatego musimy zlapac konkretne elementy i nadac im font-weight */
+
+#main-header .inner-header h1 {
+    font-size: 600%;
+    font-weight: 100;
+}
+
+#main-header .inner-header h2 {
+    font-size: 300%;
+    font-weight: 100;
+}
+
+/* about */
+
+#about {
+    text-align: center;
+    background-color: #F9FCFE;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    /*
+zablokowanie przepelnienia pozwala na opiecie calej sekcji, w ktorej znajduja sie elementy z "float"
+overflow: hidden;
+*/
+}
+
+#about .about-inner {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+
+/* selektor laczony zapisujemy bez spacji. zapis ponizej oznacza element potomy o dwoch klasach */
+
+#about .about-inner.text-left {
+    text-align: left;
+
+}
+
+#about .about-inner.text-left p {
+    margin: 0;
+}
+
+#about .about-inner img {
+    width: 50%;
+    border: 10px solid #fff;
+    border-radius: 10px;
+}
+
+/* shadow */
+
+/*
+#shadow {
+    margin-bottom: 5px;
+    width: 100%;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* skills */
+
+#skills {
+    text-align: center;
+    
+}
+
+#skills figure {
+    display: inline-block;
+}
+
+#skills figure figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+/*portfolio*/
+#portfolio{
+    text-align: center;
+    padding-bottom: 80px;
+}
+#portfolio p{
+    color: #fff;
+}
+#portfolio .img-box{
+    height: 400px;
+    width: 33.3333%;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+#img-one{
+    background-image: url(../gallery/img/portfolio1.jpg);  
+}
+#img-two{
+    background-image: url(../gallery/img/portfolio2.jpg);  
+}
+#img-three{
+    background-image: url(../gallery/img/portfolio3.jpg);  
+}
+.background-color-box{
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(42,61,79,0.8);
+    opacity: 0;
+    transition: all 0.4s;
+}
+.background-color-box:hover{
+    opacity: 1;
+}
+.border-box{
+    border: 1px solid #fff;
+    text-align: center;
+    font-weight: 100;
+    height: 100%;
+    position: relative;
+    color: #fff;
+}
+.border-box h3{
+/*    color: #fff;*/
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.text-box i{
+    font-size: 250%;
+    margin-bottom: 20px;
+}
+
+                        /* contact */
+
+#main-contact{
+    background-color: #213b50;
+    color: #fff;
+}
+#contact-address{
+    width: 50%;
+    float: left;
+    line-height: 1.5;
+}
+#contact-address address {
+    font-style: normal;
+}
+#contact-address a{
+    text-decoration: none;
+    color: #fff;
+}
+#contact-address address a span{
+    text-decoration: underline;
+}
+#social-media-icons{
+    margin-top: 50px; 
+    
+}
+#social-media-icons i{
+    border: 1px solid #fff;
+    margin-right: 30px;
+    font-size: 150%;
+    padding: 10px;
+    text-align: center;
+    width: 50px
+}
+#contact-form{
+    width: 50%;
+    float: left;
+    margin-top: 80px;
+    text-align: right;
+    
+}
+
+
+#contact-form  input,
+#contact-form  textarea{
+    width: 100%;
+    background-color: #29455d;
+    padding: 10px;  
+    border: 0;
+    margin-bottom: 15px;
+}
+::placeholder{
+    color: #c1c4c6;
+}
+#contact-form  input{
+  height: 45px;  
+}
+#contact-form textarea{
+    height: 100px;
+}
+
+#button-form{
+    display: inline-block;
+    border: 1px solid #fff;
+    background-color: #3db13d;
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 120%;
+}
+#footer-main{
+    padding: 0 70px;
+    color: #fff;
+    background-color:  #132433;
+    font-size: 80%;
+    
+}
+#footer-main p {
+    margin: 0;
+}
